@@ -22,8 +22,8 @@ except IntegrityError:
 EOF
 }
 
-echo "[INFO] Waiting for DB"
-wait_for_db
+# echo "[INFO] Waiting for DB"
+# wait_for_db
 
 echo "[INFO] Migrating database"
 cd /app
@@ -33,4 +33,4 @@ echo "[INFO] Creating Admin User"
 create_admin_user
 
 echo "[INFO] Starting Response Dev Server"
-python3 manage.py runserver 0.0.0.0:8000
+python3 manage.py runserver 0.0.0.0:8181

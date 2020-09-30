@@ -3,7 +3,7 @@ import os
 from .base import *  # noqa: F401, F403
 from .base import SLACK_CLIENT, get_env_var
 
-SITE_URL = "http://localhost:8000"
+SITE_URL = os.environ.get("SITE_URL", "http://localhost:8181")
 
 if os.environ.get("POSTGRES"):
     DATABASES = {
